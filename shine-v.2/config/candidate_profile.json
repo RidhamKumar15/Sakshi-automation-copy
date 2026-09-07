@@ -1,0 +1,209 @@
+{
+  "personal_info": {
+    "first_name": "Sakshi",
+    "last_name": "Srivastava",
+    "full_name": "Sakshi Srivastava",
+    "email": "sakshi.srivastava@example.com",
+    "phone": "+91 9546748644",
+    "phone_digits_only": "9546748644",
+    "country_code": "+91",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "country": "India",
+    "postal_code": "560001",
+    "pronouns": "She/Her",
+    "source_reference": "Shine",
+    "linkedin_url": "https://www.linkedin.com/in/sakshi-srivastava-7b08a3371/",
+    "github_url": "https://github.com/Sakshiiii24",
+    "portfolio_url": "https://sakshiii24-portfolio.vercel.app/",
+    "live_project_url": "https://freejsontocsv.com/",
+    "current_location": "Bengaluru, Karnataka, India",
+    "willing_to_relocate": true,
+    "work_authorization": {
+      "country": "India",
+      "authorized_to_work": true,
+      "requires_sponsorship": false
+    }
+  },
+  "technical_skills": {
+    "languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "C++",
+      "HTML5",
+      "CSS3"
+    ],
+    "ai_ml_data": [
+      "Machine Learning",
+      "Deep Learning",
+      "LLMs",
+      "Generative AI",
+      "PyTorch",
+      "TensorFlow",
+      "Computer Vision",
+      "NLP",
+      "MLOps"
+    ],
+    "frameworks_and_libraries": [
+      "Flask",
+      "FastAPI",
+      "Django",
+      "Spring Boot",
+      "React",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "SQLite"
+    ],
+    "tools_and_devops": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "Postman",
+      "AWS",
+      "CI/CD",
+      "VS Code"
+    ],
+    "concepts": [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "RESTful APIs",
+      "Microservices Architecture",
+      "Database Design",
+      "System Design Basics",
+      "Agile/Scrum"
+    ]
+  },
+  "experience": {
+    "total_years": 0.5,
+    "total_months": 6,
+    "is_entry_level": true,
+    "roles": [
+      {
+        "company": "Tech Solutions",
+        "title": "Software Engineering Intern",
+        "location": "Remote / Bengaluru, India",
+        "start_date": "2024-01",
+        "end_date": "2024-06",
+        "current": false,
+        "description": "Developed backend REST APIs using Java / Spring Boot and Python. Optimized database queries and participated in agile code reviews."
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Engineering University",
+      "degree": "Bachelor of Technology (B.Tech)",
+      "degree_short": "B.Tech",
+      "field_of_study": "Computer Science & Engineering",
+      "graduation_year": 2024,
+      "gpa": "8.5/10.0",
+      "percentage": "85%"
+    }
+  ],
+  "preferences": {
+    "preferred_roles": [
+      "Software Developer",
+      "Software Engineer",
+      "SDE-1",
+      "Junior Software Engineer",
+      "Entry-Level Software Engineer",
+      "Backend Developer",
+      "Python Developer",
+      "Java Developer",
+      "AI/ML Engineer",
+      "Full-Stack Developer",
+      "Associate Software Engineer",
+      "Graduate Engineer Trainee"
+    ],
+    "preferred_work_modes": [
+      "Remote",
+      "Hybrid",
+      "On-site"
+    ],
+    "preferred_locations": [
+      "Remote",
+      "India",
+      "Bengaluru",
+      "Bangalore",
+      "Hyderabad",
+      "Pune",
+      "Delhi NCR",
+      "Noida",
+      "Gurugram",
+      "Mumbai"
+    ],
+    "approved_salary_expectation_inr": {
+      "min_lpa": 6.0,
+      "expected_lpa": 9.0,
+      "current_lpa": 0.0,
+      "min_monthly": 50000,
+      "expected_monthly": 75000
+    },
+    "notice_period_days": 0,
+    "notice_period_text": "Immediate / 0 Days",
+    "available_immediately": true
+  },
+  "standard_declarations": {
+    "legally_authorized_to_work_in_india": true,
+    "require_visa_sponsorship": false,
+    "gender": "Female",
+    "disability_status": "Decline to state",
+    "veteran_status": "Not a veteran"
+  },
+  "resumes": {
+    "default": "resumes/Sakshi_resume2.pdf",
+    "ai_ml": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "java_spring": "resumes/Sakshi-Srivastava-Resume.pdf",
+    "backend": "resumes/Sakshi_Srivastava_resume.pdf",
+    "fullstack": "resumes/Sakshi_resume2.pdf",
+    "sql_data": "resumes/Sakshi-Srivastava-Resume.pdf"
+  },
+  "screening_question_presets": {
+    "notice_period": {
+      "value": "0",
+      "text": "Immediate (0 Days)",
+      "patterns": ["notice period", "how soon can you join", "joining time", "availability"]
+    },
+    "current_ctc": {
+      "value": "0",
+      "text": "0 LPA / Fresher",
+      "patterns": ["current ctc", "current salary", "current annual compensation"]
+    },
+    "expected_ctc": {
+      "value": "8.5",
+      "text": "8.5 LPA",
+      "patterns": ["expected ctc", "expected salary", "salary expectation", "compensation expectation"]
+    },
+    "total_experience": {
+      "value": "0.5",
+      "text": "0.5 Years / Fresher",
+      "patterns": ["total experience", "overall experience", "years of experience", "work experience"]
+    },
+    "highest_qualification": {
+      "value": "B.Tech / B.E. in Computer Science",
+      "text": "B.Tech / B.E. (Computer Science)",
+      "patterns": ["highest qualification", "highest degree", "education level", "graduation"]
+    },
+    "location_preference": {
+      "value": "Bengaluru / Remote / Anywhere in India",
+      "text": "Bengaluru / Remote",
+      "patterns": ["preferred location", "current location", "willing to relocate"]
+    },
+    "work_authorization": {
+      "value": "Yes",
+      "text": "Yes, authorized to work in India",
+      "patterns": ["authorized to work", "legally authorized", "work permit", "citizenship"]
+    }
+  }
+}

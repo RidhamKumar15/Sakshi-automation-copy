@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis · Naukri Job Application Automation</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+
+  <!-- Sticky Genesis Top Nav -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand-group">
+        <a href="/" class="brand-logo">
+          <div class="logo-icon">N</div>
+          <span class="brand-name">Naukri Automation</span>
+        </a>
+        <span class="brand-badge">Genesis v1.0</span>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <nav class="nav-tab-group">
+        <button type="button" id="tabBtnTracker" class="nav-tab-btn active" data-tab="tracker">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+          <span>Applications Tracker</span>
+        </button>
+        <button type="button" id="tabBtnQuestions" class="nav-tab-btn" data-tab="questions">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
+          <span>Unresolved Questions</span>
+          <span id="unresolvedBadge" class="tab-badge" style="display: none;">0</span>
+        </button>
+        <button type="button" id="tabBtnPresets" class="nav-tab-btn" data-tab="presets">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span>Central Presets & Rules</span>
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="testNotificationBtn" class="btn-ghost" style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; font-size: 12px;" title="Test desktop notification and sound alert">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span>Test Sound & Alert</span>
+        </button>
+        <div id="browserStatusBadge" class="live-indicator" style="cursor: pointer;" title="Chrome CDP Connection Status · Click to launch/reconnect">
+          <span id="browserDot" class="indicator-dot" style="background: #f59e0b;"></span>
+          <span id="browserStatusText">Checking Chrome...</span>
+        </div>
+        <div id="liveStatusBadge" class="live-indicator">
+          <span class="indicator-dot"></span>
+          <span id="statusText">Idle</span>
+        </div>
+        <div class="candidate-chip">
+          <span style="font-size: 13px; font-weight: 500; color: var(--text-secondary);">Candidate:</span>
+          <strong id="candidateName" style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Sakshi Srivastava</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+
+    <!-- TAB 1: APPLICATIONS TRACKER VIEW (PAGE A) -->
+    <div id="tabViewTracker" class="tab-view active">
+
+      <!-- Executive Control Panel -->
+      <section class="control-card">
+        <div class="control-header">
+          <div>
+            <h2 class="control-title">Naukri Automation Control Center</h2>
+            <p class="control-subtitle">Configure parameters and launch autonomous Naukri.com job search and application runs.</p>
+          </div>
+        </div>
+
+        <form id="controlForm" class="control-grid" onsubmit="return false;">
+          <div class="field-group">
+            <label class="field-label" for="platformSelect">Platform</label>
+            <select id="platformSelect" class="select-input">
+              <option value="naukri" selected>Naukri.com</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="modeSelect">Execution Mode</label>
+            <select id="modeSelect" class="select-input">
+              <option value="test" selected>🧪 Test Mode (1 Target Company)</option>
+              <option value="full">🚀 Full Automation Run</option>
+            </select>
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="limitInput">Application Limit</label>
+            <input type="number" id="limitInput" class="text-input" value="1" min="1" max="50" placeholder="e.g. 5">
+          </div>
+
+          <div class="field-group">
+            <label class="field-label" for="keywordsInput">Custom Keyword (Optional)</label>
+            <input type="text" id="keywordsInput" class="text-input" placeholder="e.g. Java Developer, Backend">
+          </div>
+
+          <div class="button-row">
+            <button type="button" id="startBtn" class="btn btn-primary">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <span>Start Automation</span>
+            </button>
+            <button type="button" id="stopBtn" class="btn btn-destructive" disabled>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
+              <span>Stop</span>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Metrics Grid -->
+      <section class="metrics-grid">
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Total Evaluated</span>
+            <span class="brand-badge">Naukri</span>
+          </div>
+          <div id="statTotal" class="metric-value">0</div>
+          <div class="metric-sub">Processed through scoring engine</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Applications Submitted</span>
+            <span class="brand-badge" style="color: var(--success); border-color: rgba(16, 185, 129, 0.3);">Live Verified</span>
+          </div>
+          <div id="statSubmitted" class="metric-value text-success">0</div>
+          <div class="metric-sub">Direct submissions completed</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Review Queue</span>
+            <span class="brand-badge" style="color: var(--warning); border-color: rgba(245, 158, 11, 0.3);">15–29 Score</span>
+          </div>
+          <div id="statReview" class="metric-value text-warning">0</div>
+          <div class="metric-sub">Waiting for human review</div>
+        </div>
+
+        <div class="metric-card">
+          <div class="metric-header">
+            <span class="metric-title">Average Match Score</span>
+            <span class="brand-badge">Quality</span>
+          </div>
+          <div id="statAvgScore" class="metric-value">0.0</div>
+          <div class="metric-sub">0–100 relevance score average</div>
+        </div>
+      </section>
+
+      <!-- Live Execution Terminal -->
+      <section class="terminal-card">
+        <div class="terminal-header">
+          <div class="terminal-title">
+            <span class="terminal-dot"></span>
+            <span>Live Console Stream</span>
+            <span class="brand-badge" id="consoleLineCount" style="margin-left: 8px; font-size: 10px; background: rgba(99, 102, 241, 0.15); color: var(--primary); border: 1px solid rgba(99, 102, 241, 0.3);">Auto-capped (0/150 lines)</span>
+          </div>
+          <div class="terminal-actions">
+            <button type="button" id="clearLogsBtn" class="btn-ghost">Clear</button>
+            <button type="button" id="copyLogsBtn" class="btn-ghost">Copy Output</button>
+          </div>
+        </div>
+        <div id="terminalBody" class="terminal-body">
+[Genesis] Naukri Automation Dashboard ready. Select parameters above and click 'Start Automation'.
+        </div>
+      </section>
+
+      <!-- Applications Tracker Table -->
+      <section class="table-card">
+        <div class="table-header">
+          <div class="table-title-group">
+            <h3 class="table-title">Job Applications Tracker</h3>
+            <span id="recordCountText" class="table-count">Loading records...</span>
+          </div>
+
+          <div class="table-filters">
+            <div class="filter-chips">
+              <button type="button" class="filter-chip active" data-filter="all">All</button>
+              <button type="button" class="filter-chip" data-filter="Submitted">Submitted</button>
+              <button type="button" class="filter-chip" data-filter="Under Review">Review Queue</button>
+              <button type="button" class="filter-chip" data-filter="Waiting for Input">Needs Action</button>
+              <button type="button" class="filter-chip" data-filter="Skipped">Skipped</button>
+            </div>
+
+            <div class="search-box">
+              <input type="text" id="tableSearchInput" class="search-input" placeholder="Filter company, role, or notes...">
+            </div>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Source</th>
+                <th>Match Score</th>
+                <th>Status</th>
+                <th>Notes / Action Required</th>
+                <th>Filled Answers</th>
+                <th>Link</th>
+              </tr>
+            </thead>
+            <tbody id="applicationsTableBody">
+              <tr>
+                <td colspan="9" style="text-align: center; padding: 40px; color: var(--text-secondary);">
+                  Loading application records...
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination Controls for Applications Table -->
+        <div class="pagination-bar" id="tablePagination">
+          <div class="pagination-info text-muted">
+            Showing <span id="pageRangeText" class="font-mono">0–0</span> of <span id="totalRecordsText" class="font-mono">0</span> applications
+          </div>
+          <div class="pagination-controls">
+            <select id="pageSizeSelect" class="select-input-sm" title="Rows per page">
+              <option value="15">15 / page</option>
+              <option value="25" selected>25 / page</option>
+              <option value="50">50 / page</option>
+              <option value="100">100 / page</option>
+            </select>
+            <button type="button" class="btn-page" id="btnFirstPage" title="First Page">«</button>
+            <button type="button" class="btn-page" id="btnPrevPage" title="Previous Page">‹</button>
+            <span class="pagination-page font-mono" id="pageIndicator">Page 1 / 1</span>
+            <button type="button" class="btn-page" id="btnNextPage" title="Next Page">›</button>
+            <button type="button" class="btn-page" id="btnLastPage" title="Last Page">»</button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TAB 2: DYNAMIC UNRESOLVED QUESTIONS PORTAL (PAGE B) -->
+    <div id="tabViewQuestions" class="tab-view" style="display: none;">
+      
+      <section class="control-card">
+        <div class="control-header">
+          <div>
+            <h2 class="control-title">Dynamic Unresolved Questions Portal</h2>
+            <p class="control-subtitle">Review questions encountered in real-world application forms without preset answers. Once saved, answers instantly persist to the central presets database so the bot never gets stuck on that phrasing again.</p>
+          </div>
+          <button type="button" id="refreshQuestionsBtn" class="btn btn-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+            <span>Refresh Questions</span>
+          </button>
+        </div>
+
+        <!-- Add Custom Question Form -->
+        <div class="custom-q-box">
+          <h4 style="font-size: 14px; font-weight: 600; margin-bottom: 10px;">➕ Add or Pre-configure a Question Preset</h4>
+          <div class="custom-q-grid">
+            <input type="text" id="manualQuestionInput" class="text-input" placeholder="Enter question phrasing (e.g. Willing to work rotational shifts?)...">
+            <input type="text" id="manualAnswerInput" class="text-input" placeholder="Enter approved answer (e.g. Yes)...">
+            <button type="button" id="saveManualPresetBtn" class="btn btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+              <span>Save Preset</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Unresolved Questions List -->
+      <section class="table-card">
+        <div class="table-header">
+          <div class="table-title-group">
+            <h3 class="table-title">Pending Unmapped Questions</h3>
+            <span id="unresolvedCountText" class="table-count">0 pending questions</span>
+          </div>
+        </div>
+
+        <div id="unresolvedListContainer" class="unresolved-container">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+    </div>
+
+    <!-- TAB 3: CENTRAL PRESETS & CANDIDATE PREFERENCES VIEW -->
+    <div id="tabViewPresets" class="tab-view" style="display: none;">
+      
+      <!-- Candidate Profile & Preferences Section -->
+      <section class="control-card">
+        <div class="control-header">
+          <div>
+            <h2 class="control-title">Candidate Target Roles & Location Preferences</h2>
+            <p class="control-subtitle">Manage target job titles, preferred hiring locations, and target salary expectations used for job filtering and scoring.</p>
+          </div>
+          <button type="button" id="saveCandidateProfileBtn" class="btn btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            <span>Save Profile Preferences</span>
+          </button>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <!-- Preferred Locations -->
+          <div>
+            <label class="field-label" style="margin-bottom: 8px; display: block;">📍 Preferred Hiring Locations</label>
+            <div id="prefLocationsList" class="chips-container" style="margin-bottom: 10px;">
+              <!-- Dynamically populated tags -->
+            </div>
+            <div style="display: flex; gap: 8px; max-width: 420px;">
+              <input type="text" id="newLocationInput" class="text-input" placeholder="Add location (e.g. Gurugram, Delhi NCR)..." onkeydown="if(event.key==='Enter') addLocationTag()">
+              <button type="button" class="btn btn-secondary" onclick="addLocationTag()">+ Add</button>
+            </div>
+          </div>
+
+          <!-- Preferred Roles -->
+          <div>
+            <label class="field-label" style="margin-bottom: 8px; display: block;">💼 Target Job Roles & Titles</label>
+            <div id="prefRolesList" class="chips-container" style="margin-bottom: 10px;">
+              <!-- Dynamically populated tags -->
+            </div>
+            <div style="display: flex; gap: 8px; max-width: 420px;">
+              <input type="text" id="newRoleInput" class="text-input" placeholder="Add job title (e.g. Python Developer, SDE-1)..." onkeydown="if(event.key==='Enter') addRoleTag()">
+              <button type="button" class="btn btn-secondary" onclick="addRoleTag()">+ Add</button>
+            </div>
+          </div>
+
+          <!-- Target Salary & Notice -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <div class="field-group">
+              <label class="field-label">Min Expected Salary (LPA)</label>
+              <input type="number" id="profileMinSalary" class="text-input" step="0.5" value="6.0">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Target Expected Salary (LPA)</label>
+              <input type="number" id="profileExpectedSalary" class="text-input" step="0.5" value="9.0">
+            </div>
+            <div class="field-group">
+              <label class="field-label">Notice Period (Days)</label>
+              <input type="number" id="profileNoticeDays" class="text-input" value="0">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Automation Preset Cards -->
+      <section class="control-card">
+        <div class="control-header">
+          <div>
+            <h2 class="control-title">Active Core Presets</h2>
+            <p class="control-subtitle">System-level presets applied automatically to common application form fields.</p>
+          </div>
+          <button type="button" id="refreshPresetsBtn" class="btn btn-secondary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+            <span>Reload Presets</span>
+          </button>
+        </div>
+
+        <!-- Presets Grid -->
+        <div class="presets-overview-grid">
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Current Location</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('current_location', 'Current Location')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetLocation">Gurugram</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Current CTC</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('current_ctc_lpa', 'Current CTC (LPA)')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetCurrentCtc">0 LPA</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Work Authorization</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('work_authorization', 'Work Authorization')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetWorkAuth">Yes (Authorized)</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Visa Sponsorship</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('requires_visa_sponsorship', 'Visa Sponsorship Required')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetVisa">No (Not Required)</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Gender</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('gender', 'Gender')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetGender">Female</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Relocation Consent</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('willing_to_relocate', 'Willing to Relocate')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetRelocate">Yes (Always)</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Base Experience</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('base_experience_years', 'Base Experience (Years)')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetExp">1.0 Year (or 1.5 if JD specifies)</strong>
+          </div>
+
+          <div class="preset-pill-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span class="preset-lbl">Expected CTC</span>
+              <button type="button" class="btn-ghost" style="font-size: 11px;" onclick="promptEditCorePreset('default_expected_ctc_lpa', 'Default Expected CTC (LPA)')">✏️ Edit</button>
+            </div>
+            <strong class="preset-val" id="presetExpectedCtc">Dynamic JD Mid-Upper Point (Default: 9.0 LPA)</strong>
+          </div>
+        </div>
+      </section>
+
+      <!-- Question Presets & Mappings Table (Full UI Editability) -->
+      <section class="table-card">
+        <div class="table-header">
+          <div class="table-title-group">
+            <h3 class="table-title">Question Presets & Answer Mappings (Editable in UI)</h3>
+            <span id="customPresetsCountText" class="table-count">Loading presets...</span>
+          </div>
+        </div>
+
+        <!-- Add Custom Question Mapping Form -->
+        <div style="padding: 16px 24px; background: var(--surface-alt); border-bottom: 1px solid var(--border);">
+          <div style="display: grid; grid-template-columns: 2fr 1.5fr auto; gap: 12px; align-items: center;">
+            <input type="text" id="newMappingKeyInput" class="text-input" placeholder="Question pattern (e.g. comfortable with 24/7 shifts, years of experience)...">
+            <input type="text" id="newMappingValInput" class="text-input" placeholder="Value (e.g. Yes, 1.0, Gurugram, 9 LPA)...">
+            <button type="button" class="btn btn-primary" onclick="addNewPresetMapping()">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              <span>Add / Update</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 45%;">Question Phrasing / Keyword</th>
+                <th style="width: 35%;">Configured Preset Value</th>
+                <th style="width: 20%; text-align: right;">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="customPresetsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- MODAL: VIEW FILLED ANSWERS (PAGE A POPUP) -->
+  <div id="answersModal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div>
+          <h3 id="modalJobTitle" class="modal-title">Filled Questionnaire Answers</h3>
+          <p id="modalJobSub" class="modal-subtitle">Job details & verified answers filled by the automation bot.</p>
+        </div>
+        <button type="button" id="closeModalBtn" class="modal-close-btn">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div id="modalStatusBanner" class="modal-banner">
+          <!-- Dynamic banner content -->
+        </div>
+
+        <div class="table-responsive" style="margin-top: 16px;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th style="width: 50%;">Question / Field Prompt</th>
+                <th style="width: 50%;">Bot-Answered Value</th>
+              </tr>
+            </thead>
+            <tbody id="modalAnswersTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" id="modalDoneBtn" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

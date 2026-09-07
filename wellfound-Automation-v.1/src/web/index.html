@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis · Job Application Automation</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%22100%22%20%22100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+</head>
+<body>
+
+  <!-- Sticky Genesis Top Nav -->
+  <header class="header-nav">
+    <div class="nav-container">
+      <div class="brand-group">
+        <a href="/" class="brand-logo">
+          <div class="logo-icon">G</div>
+          <span class="brand-name">Genesis</span>
+        </a>
+        <span class="brand-badge">Automation v1.0</span>
+      </div>
+
+      <div class="nav-actions">
+        <div id="liveStatusBadge" class="live-indicator">
+          <span class="indicator-dot"></span>
+          <span id="statusText">Idle</span>
+        </div>
+        <div class="candidate-chip">
+          <span style="font-size: 13px; font-weight: 500; color: var(--text-secondary);">Candidate:</span>
+          <strong id="candidateName" style="font-size: 13px; font-weight: 600; color: var(--text-primary);">Sakshi Srivastava</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-wrapper">
+
+    <!-- Executive Control Panel -->
+    <section class="control-card">
+      <div class="control-header">
+        <div>
+          <h2 class="control-title">Automation Control Center</h2>
+          <p class="control-subtitle">Configure parameters and launch autonomous multi-platform application runs.</p>
+        </div>
+      </div>
+
+      <form id="controlForm" class="control-grid" onsubmit="return false;">
+        <div class="field-group">
+          <label class="field-label" for="platformSelect">Platform</label>
+          <select id="platformSelect" class="select-input">
+            <option value="wellfound" selected>Wellfound (AngelList)</option>
+            <option value="linkedin">LinkedIn</option>
+            <option value="all">All Platforms (Sequential)</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="modeSelect">Execution Mode</label>
+          <select id="modeSelect" class="select-input">
+            <option value="test" selected>🧪 Test Mode (1 Target Company)</option>
+            <option value="full">🚀 Full Automation Run</option>
+          </select>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="limitInput">Application Limit</label>
+          <input type="number" id="limitInput" class="text-input" value="1" min="1" max="50" placeholder="e.g. 5">
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="keywordsInput">Custom Keyword (Optional)</label>
+          <input type="text" id="keywordsInput" class="text-input" placeholder="Default keywords from settings">
+        </div>
+
+        <div class="button-row">
+          <button type="button" id="startBtn" class="btn btn-primary">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>Start Automation</span>
+          </button>
+          <button type="button" id="applyWaitingBtn" class="btn" style="background-color: #20970B; color: #FFFFFF; border: 1px solid #20970B; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            <span>Apply All Waiting (<span id="waitingCountBadge">0</span>)</span>
+          </button>
+          <button type="button" id="stopBtn" class="btn btn-destructive" disabled>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="6" width="12" height="12"/></svg>
+            <span>Stop</span>
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Metrics Grid -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Total Evaluated</span>
+          <span class="brand-badge">All Jobs</span>
+        </div>
+        <div id="statTotal" class="metric-value">0</div>
+        <div class="metric-sub">Processed through scoring engine</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Submitted</span>
+          <span class="status-pill status-submitted">Verified</span>
+        </div>
+        <div id="statSubmitted" class="metric-value">0</div>
+        <div class="metric-sub">Auto-applied with tailored pitch</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Review Queue</span>
+          <span class="status-pill status-review">Score 55–69</span>
+        </div>
+        <div id="statReview" class="metric-value">0</div>
+        <div class="metric-sub">Pending candidate approval</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-header">
+          <span class="metric-title">Average Match Score</span>
+          <span class="status-pill status-waiting">Scoring Engine</span>
+        </div>
+        <div id="statAvgScore" class="metric-value">0.0</div>
+        <div class="metric-sub">Weighted profile alignment</div>
+      </div>
+    </section>
+
+    <!-- Live Terminal Activity Feed -->
+    <section class="terminal-card">
+      <div class="terminal-header">
+        <div class="terminal-title-group">
+          <div class="window-dots">
+            <span class="window-dot red"></span>
+            <span class="window-dot yellow"></span>
+            <span class="window-dot green"></span>
+          </div>
+          <span class="terminal-title">genesis-agent-stream :: live-logs</span>
+          <span id="terminalBufferBadge" class="terminal-badge">Buffer: 0 / 200 lines</span>
+        </div>
+        <div class="terminal-controls">
+          <button id="autoScrollToggleBtn" class="btn-terminal active" title="Toggle Auto Scroll">Auto-scroll: ON</button>
+          <button id="clearLogsBtn" class="btn-terminal">Clear</button>
+          <button id="copyLogsBtn" class="btn-terminal">Copy Output</button>
+        </div>
+      </div>
+      <div id="terminalBody" class="terminal-body">[Genesis Engine] Ready. Choose options above and click 'Start Automation' to launch.</div>
+    </section>
+
+    <!-- Applications Table -->
+    <section class="table-card">
+      <div class="table-header-bar">
+        <div class="table-heading-group">
+          <h3 class="table-title">Application Records</h3>
+          <span id="recordCountText" class="table-count-badge">Loading tracking database...</span>
+        </div>
+
+        <div class="table-filters">
+          <div class="search-wrapper">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="tableSearchInput" class="search-input" placeholder="Search company or role...">
+          </div>
+
+          <div class="chip-group">
+            <button class="filter-chip active" data-filter="all">All</button>
+            <button class="filter-chip" data-filter="Submitted">Submitted</button>
+            <button class="filter-chip" data-filter="Under Review">Review Queue</button>
+            <button class="filter-chip" data-filter="Waiting for Input">Needs Action</button>
+            <button class="filter-chip" data-filter="Not Accepting">Not Accepting</button>
+            <button class="filter-chip" data-filter="Skipped">Skipped</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="table-responsive">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Platform</th>
+              <th>Match Score</th>
+              <th>Status</th>
+              <th>Details & Notes</th>
+              <th>Job URL</th>
+            </tr>
+          </thead>
+          <tbody id="applicationsTableBody">
+            <tr>
+              <td colspan="8" style="text-align: center; padding: 32px; color: var(--text-secondary);">
+                Loading application database...
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Dynamic Pagination Bar -->
+      <div class="table-pagination-bar">
+        <div class="pagination-info">
+          <span id="paginationInfoText">Showing 0–0 of 0 records</span>
+          <div class="page-size-selector">
+            <label for="pageSizeSelect">Rows per page:</label>
+            <select id="pageSizeSelect" class="select-input-sm">
+              <option value="15">15</option>
+              <option value="25" selected>25</option>
+              <option value="50">50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </div>
+        <div class="pagination-nav" id="paginationNav">
+          <!-- Populated dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Genesis Design System &bull; Wellfound & LinkedIn Application Automation &bull; Candidate: Sakshi Srivastava</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

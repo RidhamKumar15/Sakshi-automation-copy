@@ -1,0 +1,17 @@
+{
+  "name": "wellfound-automation",
+  "version": "1.0.0",
+  "description": "Autonomous Job-Search and Application Automation Agent with Persistent Dedicated Chrome Profile",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "status": "node src/index.js status",
+    "review": "node src/index.js review",
+    "test-score": "node src/index.js test-score"
+  },
+  "dependencies": {
+    "playwright-core": "^1.50.1",
+    "ws": "^8.18.0"
+  }
+}

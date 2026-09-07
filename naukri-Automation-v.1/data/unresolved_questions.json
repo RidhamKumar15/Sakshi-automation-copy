@@ -1,0 +1,49 @@
+{
+  "unresolved": [
+    {
+      "id": "q_4_1788757970",
+      "question": "Are you willing to work at Bavla / Moraiya Changodar, Ahmedabad?",
+      "company": "SHC Projects",
+      "job_title": "Graduate Trainee Graduate Engineer Trainee GET",
+      "job_url": "https://www.naukri.com/job-listings-graduate-trainee-graduate-engineer-trainee-get-shc-projects-ahmedabad-0-to-1-years-050926007548",
+      "first_seen": "2026-09-07 10:42",
+      "options": [],
+      "status": "pending"
+    },
+    {
+      "id": "q_3_1788757949",
+      "question": "Its a rotational shifts and Night Shift?",
+      "company": "CIEL HR",
+      "job_title": "NAPS Trainee",
+      "job_url": "https://www.naukri.com/job-listings-naps-trainee-ciel-hr-chennai-kanniyakumari-viluppuram-0-to-1-years-050926009964",
+      "first_seen": "2026-09-07 10:42",
+      "options": [
+        "Willing\n\nNot Willing",
+        "Willing\n\nNot Willing",
+        "Willing",
+        "Not Willing"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "q_24_1788521746",
+      "question": "You have expertise on which tool? (AutoCAD/ Creo)",
+      "company": "Electrodrive Powertrain Solutions",
+      "job_title": "Graduate Engineer Trainee",
+      "job_url": "https://www.naukri.com/job-listings-graduate-engineer-trainee-electrodrive-powertrain-solutions-coimbatore-0-to-0-years-310326927890",
+      "first_seen": "2026-09-04 17:05",
+      "options": [],
+      "status": "pending"
+    },
+    {
+      "id": "q_14_1788246479",
+      "question": "Tell us about yourself in less than 200 words. (Do not use AI)",
+      "company": "D Ellinas Factory Products India",
+      "job_title": "Content Creator & Social Media Executive",
+      "job_url": "https://www.naukri.com/job-listings-content-creator-social-media-executive-d-ellinas-factory-products-india-chennai-0-to-5-years-010926013918",
+      "first_seen": "2026-09-01 12:37",
+      "options": [],
+      "status": "pending"
+    }
+  ]
+}

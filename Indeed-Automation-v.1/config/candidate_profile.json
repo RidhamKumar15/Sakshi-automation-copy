@@ -1,0 +1,245 @@
+{
+  "personal_info": {
+    "first_name": "Sakshi",
+    "last_name": "Srivastava",
+    "full_name": "Sakshi Srivastava",
+    "email": "sakshi.srivastava@example.com",
+    "phone": "+91 9546748644",
+    "phone_digits_only": "9546748644",
+    "phone_country_code": "+91",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "country": "India",
+    "postal_code": "560001",
+    "pronouns": "She/Her",
+    "source_reference": "Indeed",
+    "linkedin_url": "https://www.linkedin.com/in/sakshi-srivastava-7b08a3371/",
+    "github_url": "https://github.com/Sakshiiii24",
+    "portfolio_url": "https://sakshiii24-portfolio.vercel.app/",
+    "live_project_url": "https://freejsontocsv.com/",
+    "current_location": "Bengaluru, India",
+    "willing_to_relocate": true,
+    "work_authorization": {
+      "country": "India",
+      "authorized_to_work": true,
+      "requires_sponsorship": false
+    }
+  },
+  "technical_skills": {
+    "languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "C++",
+      "HTML5",
+      "CSS3"
+    ],
+    "ai_ml_data": [
+      "Machine Learning",
+      "Deep Learning",
+      "LLMs",
+      "Generative AI",
+      "PyTorch",
+      "TensorFlow",
+      "Computer Vision",
+      "NLP",
+      "MLOps"
+    ],
+    "frameworks_and_libraries": [
+      "Flask",
+      "FastAPI",
+      "Django",
+      "Spring Boot",
+      "React",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "SQLite"
+    ],
+    "tools_and_devops": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "Postman",
+      "AWS",
+      "CI/CD",
+      "VS Code"
+    ],
+    "concepts": [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "RESTful APIs",
+      "Microservices Architecture",
+      "Database Design",
+      "System Design Basics",
+      "Agile/Scrum"
+    ]
+  },
+  "experience": {
+    "total_years": 0.5,
+    "is_entry_level": true,
+    "roles": [
+      {
+        "company": "Tech Solutions",
+        "title": "Software Engineering Intern",
+        "location": "Remote / Bengaluru, India",
+        "start_date": "2024-01",
+        "end_date": "2024-06",
+        "current": false,
+        "description": "Developed backend REST APIs using Java / Spring Boot and Python. Optimized database queries and participated in agile code reviews."
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Engineering University",
+      "degree": "Bachelor of Technology (B.Tech)",
+      "degree_level": "Bachelor's Degree",
+      "field_of_study": "Computer Science & Engineering",
+      "graduation_year": 2024,
+      "gpa": "8.5/10.0"
+    }
+  ],
+  "preferences": {
+    "preferred_roles": [
+      "Software Developer",
+      "Software Engineer",
+      "SDE-1",
+      "SDE 1",
+      "Junior Software Engineer",
+      "Entry-Level Software Engineer",
+      "Junior Developer",
+      "Backend Developer",
+      "Frontend Developer",
+      "Python Developer",
+      "Java Developer",
+      "Web Developer",
+      "SQL Developer",
+      "Data Engineer",
+      "AI/ML Engineer",
+      "Full-Stack Developer",
+      "Full Stack Developer",
+      "Associate Software Engineer",
+      "Graduate Engineer Trainee",
+      "Software Engineering Intern"
+    ],
+    "preferred_work_modes": [
+      "Remote",
+      "Hybrid",
+      "On-site"
+    ],
+    "preferred_locations": [
+      "Remote",
+      "India",
+      "Bengaluru",
+      "Bangalore",
+      "Hyderabad",
+      "Pune",
+      "Delhi NCR",
+      "Delhi",
+      "Noida",
+      "Gurugram",
+      "Gurgaon",
+      "Mumbai"
+    ],
+    "approved_salary_expectation_inr": {
+      "min_lpa": 6.0,
+      "expected_lpa": 8.5,
+      "monthly_inr": 70000,
+      "annual_inr": 850000,
+      "current_annual_inr": 0,
+      "current_lpa": 0,
+      "current_ctc_text": "0"
+    },
+    "notice_period_days": 0,
+    "available_immediately": true
+  },
+  "custom_question_answers": {
+    "current cost to company": "0",
+    "expected cost to company": "850000",
+    "current ctc": "0",
+    "expected ctc": "850000",
+    "start a new role": "Immediately",
+    "how long do you need before you can start": "Immediately",
+    "notice period": "0",
+    "linkedin profile": "https://www.linkedin.com/in/sakshi-srivastava-7b08a3371/"
+  },
+  "questionnaire_answers": {
+    "experience_by_skill": {
+      "python": 1,
+      "java": 1,
+      "javascript": 1,
+      "typescript": 1,
+      "sql": 1,
+      "c++": 1,
+      "c": 1,
+      "spring boot": 1,
+      "react": 1,
+      "node": 1,
+      "django": 1,
+      "flask": 1,
+      "fastapi": 1,
+      "html": 1,
+      "css": 1,
+      "git": 1,
+      "docker": 1,
+      "aws": 1,
+      "machine learning": 1,
+      "ai": 1,
+      "software development": 1,
+      "software engineering": 1,
+      "backend development": 1,
+      "frontend development": 1,
+      "full stack development": 1,
+      "rest api": 1,
+      "default": 1
+    },
+    "education_highest_level": "Bachelor's Degree",
+    "degree_name": "Bachelor of Technology (B.Tech)",
+    "major": "Computer Science & Engineering",
+    "graduation_year": "2024",
+    "notice_period": "0",
+    "notice_period_text": "Immediately / 0 days",
+    "available_to_start": "Immediately",
+    "work_authorization_india": "Yes",
+    "sponsorship_required": "No",
+    "willing_to_relocate": "Yes",
+    "willing_to_commute": "Yes",
+    "background_check_consent": "Yes",
+    "drug_test_consent": "Yes",
+    "english_proficiency": "Fluent / Professional",
+    "languages_spoken": "English, Hindi"
+  },
+  "tailored_pitch_templates": {
+    "ai_ml": "I am interested in {company} because this role combines AI/ML engineering with real product development, including end-to-end ML pipelines, Deep Learning, Generative AI, LLMs, and model deployment. I'm particularly interested in working on production-focused AI systems.\n\nMy background in Python and software development, along with my hands-on interest in Machine Learning, Deep Learning, LLMs, and AI applications, aligns with the role. I'm comfortable learning new technologies quickly and would be excited to work with tools such as PyTorch, Docker, cloud platforms, and REST APIs.\n\nI have also built and deployed projects independently, including a live JSON-to-CSV conversion tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}",
+    "java_spring": "I am interested in {company} because this role matches my hands-on experience in Java, Spring Boot, Object-Oriented Programming (OOP), and building robust microservices and RESTful APIs. I enjoy writing clean, maintainable, and high-performance backend systems integrated with relational databases (PostgreSQL/MySQL) and Docker.\n\nI have also built and deployed projects independently, including a live web tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}",
+    "backend": "I am interested in {company} because this role closely matches my experience with Python/Java backend development, REST APIs, relational databases, and building scalable software systems. I am comfortable learning quickly, debugging problems, taking ownership, and contributing in a fast-paced environment.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}",
+    "fullstack": "I am excited to apply for the {title} position at {company}. My background in full-stack development with Python, JavaScript/TypeScript, modern frameworks, and databases aligns closely with your product needs. I enjoy building clean, responsive user interfaces backed by robust REST APIs.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}",
+    "general": "I am interested in {company} because this role offers the opportunity to build robust, scalable software. My foundation in Python, Java, data structures, algorithms, and RESTful APIs aligns well with your engineering requirements. I thrive on learning new technologies quickly and writing clean, production-ready code.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}"
+  },
+  "standard_declarations": {
+    "legally_authorized_to_work_in_india": true,
+    "require_visa_sponsorship": false,
+    "gender": "Female",
+    "disability_status": "Decline to state",
+    "veteran_status": "Not a veteran"
+  },
+  "resumes": {
+    "default": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "primary": "resumes/Sakshi-Srivastava-Resume.pdf",
+    "ai_ml": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "java_spring": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "backend": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "fullstack": "resumes/Sakshi_Srivastava_Resume.pdf",
+    "sql_data": "resumes/Sakshi_Srivastava_Resume.pdf"
+  }
+}

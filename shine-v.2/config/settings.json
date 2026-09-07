@@ -1,0 +1,125 @@
+{
+  "browser": {
+    "user_data_dir": "~/.config/google-chrome-automation",
+    "profile_directory": "Profile 4",
+    "profile_name": "Sakshi-Automation",
+    "headless": false,
+    "remote_debugging_port": 9222,
+    "slow_mo_ms": 150,
+    "navigation_timeout_ms": 30000,
+    "action_timeout_ms": 15000
+  },
+  "search_criteria": {
+    "target_roles": [
+      "Software Developer",
+      "Software Engineer",
+      "SDE",
+      "SDE-1",
+      "SDE 1",
+      "Junior Software Engineer",
+      "Entry-Level Software Engineer",
+      "Junior Developer",
+      "Backend Developer",
+      "Frontend Developer",
+      "Python Developer",
+      "Java Developer",
+      "Web Developer",
+      "SQL Developer",
+      "Database Developer",
+      "Data Engineer",
+      "AI/ML Engineer",
+      "Machine Learning Engineer",
+      "Full-Stack Developer",
+      "Full Stack Developer",
+      "Associate Software Engineer",
+      "Graduate Engineer Trainee",
+      "Software Engineering Intern",
+      "Software Trainee"
+    ],
+    "target_locations": [
+      "Remote",
+      "India",
+      "Bengaluru",
+      "Bangalore",
+      "Hyderabad",
+      "Pune",
+      "Delhi",
+      "Noida",
+      "Gurugram",
+      "Mumbai"
+    ],
+    "job_types": [
+      "Full-time",
+      "Contract",
+      "Internship"
+    ]
+  },
+  "scoring": {
+    "weights": {
+      "skill_match": 30,
+      "experience_match": 25,
+      "role_relevance": 25,
+      "location_preference": 10,
+      "eligibility": 10
+    },
+    "thresholds": {
+      "auto_apply_min_score": 70,
+      "review_queue_min_score": 55
+    }
+  },
+  "application": {
+    "max_applications_per_run": 250,
+    "human_in_the_loop_required_for": [
+      "captcha",
+      "security_verification",
+      "otp_or_2fa",
+      "assessments",
+      "unapproved_salary_question",
+      "unconfigured_legal_or_disability_declaration",
+      "payment_request"
+    ],
+    "default_resume_filename": "Sakshi_Srivastava_Resume.pdf",
+    "pause_on_captcha": true,
+    "auto_submit_verified_only": true
+  },
+  "notifications": {
+    "desktop_enabled": true,
+    "sound_enabled": false,
+    "cooldown_seconds": 30
+  },
+  "sources": {
+    "shine": {
+      "enabled": true,
+      "base_url": "https://www.shine.com",
+      "search_keywords": [
+        "Software Engineer",
+        "Software Developer",
+        "SDE 1",
+        "Junior Software Engineer",
+        "Entry-Level Software Engineer",
+        "Backend Developer",
+        "Python Developer",
+        "Java Developer",
+        "Full Stack Developer",
+        "Associate Software Engineer",
+        "Graduate Engineer Trainee",
+        "Data Engineer",
+        "AI/ML Engineer",
+        "Frontend Developer"
+      ],
+      "search_filters": {
+        "experience": "0",
+        "location": "India",
+        "freshness_tiers": [
+          1,
+          3,
+          7,
+          15
+        ],
+        "max_posting_age_days": 15,
+        "sort_by_freshness": true,
+        "skip_external_company_portals": true
+      }
+    }
+  }
+}

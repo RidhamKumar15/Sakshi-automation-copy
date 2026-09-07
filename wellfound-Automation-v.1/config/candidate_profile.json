@@ -1,0 +1,173 @@
+{
+  "personal_info": {
+    "first_name": "Sakshi",
+    "last_name": "Srivastava",
+    "full_name": "Sakshi Srivastava",
+    "email": "sakshi.srivastava@example.com",
+    "phone": "+91 9546748644",
+    "city": "Bengaluru",
+    "state": "Karnataka",
+    "country": "India",
+    "postal_code": "560001",
+    "pronouns": "She/Her",
+    "source_reference": "Wellfound",
+    "linkedin_url": "https://www.linkedin.com/in/sakshi-srivastava-7b08a3371/",
+    "github_url": "https://github.com/Sakshiiii24",
+    "portfolio_url": "https://sakshiii24-portfolio.vercel.app/",
+    "live_project_url": "https://freejsontocsv.com/",
+    "current_location": "India",
+    "willing_to_relocate": true,
+    "work_authorization": {
+      "country": "India",
+      "authorized_to_work": true,
+      "requires_sponsorship": false
+    }
+  },
+  "technical_skills": {
+    "languages": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "C++",
+      "HTML5",
+      "CSS3"
+    ],
+    "ai_ml_data": [
+      "Machine Learning",
+      "Deep Learning",
+      "LLMs",
+      "Generative AI",
+      "PyTorch",
+      "TensorFlow",
+      "Computer Vision",
+      "NLP",
+      "MLOps"
+    ],
+    "frameworks_and_libraries": [
+      "Flask",
+      "FastAPI",
+      "Django",
+      "Spring Boot",
+      "React",
+      "Node.js",
+      "Express.js",
+      "Tailwind CSS"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Redis",
+      "SQLite"
+    ],
+    "tools_and_devops": [
+      "Git",
+      "GitHub",
+      "Docker",
+      "Linux",
+      "Postman",
+      "AWS",
+      "CI/CD",
+      "VS Code"
+    ],
+    "concepts": [
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming (OOP)",
+      "RESTful APIs",
+      "Microservices Architecture",
+      "Database Design",
+      "System Design Basics",
+      "Agile/Scrum"
+    ]
+  },
+  "experience": {
+    "total_years": 0.5,
+    "is_entry_level": true,
+    "roles": [
+      {
+        "company": "Tech Solutions",
+        "title": "Software Engineering Intern",
+        "location": "Remote / Bengaluru, India",
+        "start_date": "2024-01",
+        "end_date": "2024-06",
+        "current": false,
+        "description": "Developed backend REST APIs using Java / Spring Boot and Python. Optimized database queries and participated in agile code reviews."
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "Engineering University",
+      "degree": "Bachelor of Technology (B.Tech)",
+      "field_of_study": "Computer Science & Engineering",
+      "graduation_year": 2024,
+      "gpa": "8.5/10.0"
+    }
+  ],
+  "preferences": {
+    "preferred_roles": [
+      "Software Developer",
+      "Software Engineer",
+      "SDE-1",
+      "Junior Software Engineer",
+      "Entry-Level Software Engineer",
+      "Backend Developer",
+      "Python Developer",
+      "Java Developer",
+      "AI/ML Engineer",
+      "Full-Stack Developer",
+      "Associate Software Engineer",
+      "Graduate Engineer Trainee"
+    ],
+    "preferred_work_modes": [
+      "Remote",
+      "Hybrid",
+      "On-site"
+    ],
+    "preferred_locations": [
+      "Remote",
+      "India",
+      "Bengaluru",
+      "Bangalore",
+      "Hyderabad",
+      "Pune",
+      "Delhi NCR",
+      "Noida",
+      "Gurugram",
+      "Mumbai"
+    ],
+    "approved_salary_expectation_inr": {
+      "min_lpa": 6.0,
+      "expected_lpa": 9.0
+    },
+    "notice_period_days": 0,
+    "available_immediately": true
+  },
+  "tailored_pitch_templates": {
+    "ai_ml": "I am interested in {company} because this role combines AI/ML engineering with real product development, including end-to-end ML pipelines, Deep Learning, Generative AI, LLMs, and model deployment. I’m particularly interested in working on production-focused AI systems rather than only experimental models.\n\nMy background in Python and software development, along with my interest in Machine Learning, Deep Learning, LLMs, and AI-powered applications, aligns with the role. I’m comfortable learning new technologies quickly and would be excited to work with tools such as PyTorch/TensorFlow, Docker, cloud platforms, APIs, and MLOps workflows while building practical AI solutions.\n\nI have also built and deployed projects independently and enjoy taking ideas from development to production. One of my live projects is a JSON-to-CSV conversion tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI’m particularly interested in contributing to {company}'s AI-driven initiatives while strengthening my hands-on experience across the complete AI/ML lifecycle, from data and model development to deployment and monitoring.",
+    "sql_data": "I am interested in {company} because this role aligns with my background in SQL, relational database management, data modeling, and backend data processing. I have strong experience writing complex SQL queries, designing optimized schemas (PostgreSQL, MySQL), and building backend data services in Python/Java. I'm passionate about working on scalable data architectures, ETL pipelines, and high-integrity database systems in a fast-paced environment.\n\nI have also built and deployed projects independently, including a live JSON-to-CSV data conversion tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI would be excited to demonstrate my database and development skills and contribute to {company}’s data and software engineering teams.",
+    "java_spring": "I am interested in {company} because this role matches my hands-on experience in Java, Spring Boot, Object-Oriented Programming (OOP), and building robust microservices and RESTful APIs. I enjoy writing clean, maintainable, and high-performance backend systems integrated with relational databases (PostgreSQL/MySQL) and Docker. I'm comfortable learning new frameworks quickly, taking ownership, and solving challenging engineering problems.\n\nI have also built and deployed projects independently, including a live web tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI look forward to discussing how my Java backend skills can add value to {company}'s engineering goals.",
+    "backend": "I am interested in {company} because this role closely matches my experience with Python and backend development, REST APIs, databases, and building scalable web applications. I’m particularly interested in working on backend systems that support {company}'s products and collaborating with engineering, data, and product teams.\n\nThe opportunity to work with Python, backend frameworks, databases, cloud platforms, Docker, and API integrations aligns well with my skills and the areas I am actively developing. I’m comfortable learning quickly, debugging problems, taking ownership, and contributing in a fast-paced startup environment.\n\nI have also built and deployed projects independently, including a live JSON-to-CSV conversion tool.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI would be excited to demonstrate my technical skills and contribute to {company}’s backend and product development.",
+    "computer_vision": "{company} interests me because it works on real-world computer vision and sensor systems where performance and reliability matter. I’m particularly interested in the opportunity to work on object detection, tracking, image processing, and deep learning while contributing to real-time vision applications.\n\nMy experience with Python, AI/ML applications, and building technical projects has given me a strong interest in computer vision, and I’m looking to deepen my hands-on expertise by working on challenging real-world problems. The combination of research, fast prototyping, and production-focused engineering makes this role particularly interesting to me.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI look forward to discussing how my skills and passion for vision systems align with {company}'s goals.",
+    "fullstack": "I am excited to apply for the {title} position at {company}. My background in full-stack development with Python, JavaScript/TypeScript, modern frameworks, and databases aligns closely with your product needs.\n\nI enjoy building clean, responsive user interfaces backed by robust, scalable REST APIs. I take pride in taking projects from idea to production deployment, having built and launched independent web tools such as my live JSON-to-CSV converter.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI’m eager to bring my problem-solving skills, ownership mindset, and rapid learning ability to {company}'s development team.",
+    "general": "I am interested in {company} because this role offers the opportunity to build robust, scalable software in a fast-paced, high-impact environment. My foundation in Python, Java, data structures, algorithms, and RESTful APIs aligns well with your engineering requirements.\n\nI have built and deployed projects independently, including a live JSON-to-CSV conversion tool, and I thrive on learning new technologies quickly, debugging challenging problems, and writing clean, production-ready code.\n\nPortfolio: {portfolio_url}\nGitHub: {github_url}\nLinkedIn: {linkedin_url}\nProject: {live_project_url}\n\nI look forward to the opportunity to contribute to {company}'s mission and discuss how my skills align with your team."
+  },
+  "standard_declarations": {
+    "legally_authorized_to_work_in_india": true,
+    "require_visa_sponsorship": false,
+    "gender": "Female",
+    "disability_status": "Decline to state",
+    "veteran_status": "Not a veteran"
+  },
+  "resumes": {
+    "default": "resumes/Sakshi_resume2.pdf",
+    "ai_ml": "resumes/Sakshi_AI_ML_Resume.pdf",
+    "java_spring": "resumes/Sakshi_Java_Backend_Resume.pdf",
+    "backend": "resumes/Sakshi_Python_Backend_Resume.pdf",
+    "fullstack": "resumes/Sakshi_FullStack_Resume.pdf",
+    "sql_data": "resumes/Sakshi_Data_SQL_Resume.pdf",
+    "computer_vision": "resumes/Sakshi_AI_ML_Resume.pdf"
+  }
+}

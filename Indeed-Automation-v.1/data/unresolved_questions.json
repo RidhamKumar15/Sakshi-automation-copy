@@ -1,0 +1,130 @@
+{
+  "unresolved": [
+    {
+      "id": "q_1787815296607",
+      "question": "What is your expected annual CTC? (INR) *",
+      "field_type": "text",
+      "options": [],
+      "company": "CLANX",
+      "role": "Software Engineer - I (NodeJS, Python, Go) - Bengaluru",
+      "job_url": "",
+      "timestamp": "2026-08-27 12:51"
+    },
+    {
+      "id": "q_1788159391671",
+      "question": "will you be able to reliably commute or relocate to erode, tamil nadu for this job? *",
+      "field_type": "radio",
+      "options": [
+        {
+          "id": "single-select-question-_r_14_-0",
+          "name": "q_f7516eb691e8862208ef4eba18f24d5c",
+          "value": "YES_I_CAN_MAKE_THE_COMMUTE",
+          "label": "Yes, I can make the commute",
+          "legend": "Will you be able to reliably commute or relocate to Erode, Tamil Nadu for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_14_-1",
+          "name": "q_f7516eb691e8862208ef4eba18f24d5c",
+          "value": "YES_I_AM_PLANNING_TO_RELOCATE",
+          "label": "Yes, I am planning to relocate",
+          "legend": "Will you be able to reliably commute or relocate to Erode, Tamil Nadu for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_14_-2",
+          "name": "q_f7516eb691e8862208ef4eba18f24d5c",
+          "value": "YES_BUT_I_NEED_RELOCATION_ASSISTANCE",
+          "label": "Yes, but I need relocation assistance",
+          "legend": "Will you be able to reliably commute or relocate to Erode, Tamil Nadu for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_14_-3",
+          "name": "q_f7516eb691e8862208ef4eba18f24d5c",
+          "value": "NO",
+          "label": "No",
+          "legend": "Will you be able to reliably commute or relocate to Erode, Tamil Nadu for this job? *",
+          "checked": false
+        }
+      ],
+      "company": "ASCENT E-DIGIT SOLUTIONS PVT LTD",
+      "role": "Full stack intern",
+      "job_url": "",
+      "timestamp": "2026-08-31 12:26"
+    },
+    {
+      "id": "q_1788374740118",
+      "question": "will you be able to reliably commute or relocate to mohali, punjab for this job? *",
+      "field_type": "radio",
+      "options": [
+        {
+          "id": "single-select-question-_r_15_-0",
+          "name": "q_4a218af6859403e7f10c78d2dfab7c20",
+          "value": "YES_I_CAN_MAKE_THE_COMMUTE",
+          "label": "Yes, I can make the commute",
+          "legend": "Will you be able to reliably commute or relocate to Mohali, Punjab for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_15_-1",
+          "name": "q_4a218af6859403e7f10c78d2dfab7c20",
+          "value": "YES_I_AM_PLANNING_TO_RELOCATE",
+          "label": "Yes, I am planning to relocate",
+          "legend": "Will you be able to reliably commute or relocate to Mohali, Punjab for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_15_-2",
+          "name": "q_4a218af6859403e7f10c78d2dfab7c20",
+          "value": "YES_BUT_I_NEED_RELOCATION_ASSISTANCE",
+          "label": "Yes, but I need relocation assistance",
+          "legend": "Will you be able to reliably commute or relocate to Mohali, Punjab for this job? *",
+          "checked": false
+        },
+        {
+          "id": "single-select-question-_r_15_-3",
+          "name": "q_4a218af6859403e7f10c78d2dfab7c20",
+          "value": "NO",
+          "label": "No",
+          "legend": "Will you be able to reliably commute or relocate to Mohali, Punjab for this job? *",
+          "checked": false
+        }
+      ],
+      "company": "FARESPLANET TRAVEL PVT LTD",
+      "role": "Forward-Deployed Engineer (FDE)",
+      "job_url": "",
+      "timestamp": "2026-09-03 00:15"
+    },
+    {
+      "id": "q_1788464668760",
+      "question": "Where are you currently based? *",
+      "field_type": "text",
+      "options": [],
+      "company": "Eurofins GSC IT DC",
+      "role": ".Net Fullstack Engineer",
+      "job_url": "",
+      "timestamp": "2026-09-04 01:14"
+    },
+    {
+      "id": "q_1788470740468",
+      "question": "Do you have UAN/EPFO deductions from all your previous employments? *",
+      "field_type": "text",
+      "options": [],
+      "company": "CGI",
+      "role": "Software Engineer- IAM Developer",
+      "job_url": "",
+      "timestamp": "2026-09-04 02:55"
+    },
+    {
+      "id": "q_1788501086401",
+      "question": "7. What is your current Annual salary? (INR) *",
+      "field_type": "text",
+      "options": [],
+      "company": "Bosch Group",
+      "role": "DevOps CI/CD Engineer",
+      "job_url": "",
+      "timestamp": "2026-09-04 11:21"
+    }
+  ]
+}
